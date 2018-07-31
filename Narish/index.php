@@ -58,12 +58,12 @@
 				
 				<div class="form-group">
 					<label for="user"> Username: </label>
-					<input type="text" class="form-control" id="user" placeholder="Input Username here">
+					<input type="text" class="form-control" id="user" name="txtusername" placeholder="Input Username here">
 				</div>
 
 				<div class="form-group">
 					<label for="pass"> Password: </label>
-					<input type="password" class="form-control" id="password" placeholder="Input Password here">
+					<input type="password" class="form-control" id="password" name="txtpassword" placeholder="Input Password here">
 				</div>
 
 				<div class="text-center">
@@ -78,9 +78,50 @@
 		</div>
 	</section>
 	
-	<?php
-		echo "test php";
-	?>
+	<!--<?php
+		//echo "test php";
+	?> -->
+	<section class="container">
+		<div class="row">
+			<div class="col-lg-6 col-md-8 col-sm-10 col-xs-12">
+				<form class="form" method="post" action="loginCheck.php">
+					<div class="form-group">
+						<label for="txtUN">Username:</label>
+						<input type="text" class="form-control" name="txtUN" id="unID" placeholder="Input Username here">
+					</div>
+
+					<div class="form-group">
+						<label for="txtPW">Password:</label>
+						<input type="password" class="form-control" name="txtPW" id="pwID" placeholder="Input Password here">
+					</div>	
+					<div class="text-center">
+						<button type="submit" class="btn btn-info btn-lg" id="LoginHere">LOGIN HERE </button> 
+					</div>
+				</form>	
+
+				<form class="form" method="post" action="addUser.php">
+					<div class="form-group">
+						<label for="newUser">Input Email Address </label>
+						<input type="text" name="newUser" id="newUserID" class="form-control">
+					</div>
+					<div class="form-group">
+						<label for="newPass"> Input New Password </label>
+						<input type="password" name="newPass" id="newPassID" class="form-control">
+					</div>
+					<div class="form-group">
+						<label for="confirmPass"> Retype desired Password </label>
+						<input type="password" name="confirmPass" id="confirmPassID" class="form-control">
+
+						<input type="hidden" name="confirmedPass" id="confirmedPass" class="form-control">
+					</div>	
+
+					<div class="text-center">
+						<button type="submit" class="btn btn-success  btn-lg" id="btnAddMember" >Add User </button>		
+					</div>
+				</form>
+			</div>	
+		</div>
+	</section>
 
 </body>
 </html>
